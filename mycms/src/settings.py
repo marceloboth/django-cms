@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 
 
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://marcelo.both@gmail.com:141105@virtual-cms.herokuapp.com/:5432/cms_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://marcelo.both@gmail.com:141105@localhost/cms_db')}
 
 
 #DATABASES = {
