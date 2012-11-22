@@ -2,5 +2,49 @@
 {% load cms_tags %}
 
 {% block base_content %}
-  {% placeholder template_contato_content %}
+{% placeholder template_contato_content %}
+
+
+<!-- Main Page Content and Sidebar -->
+
+<div class="row">
+
+	<!-- Contact Details -->
+	<div class="nine columns">
+
+		<p>{% placeholder "texto" %}</p>
+
+		<dl class="contained tabs">
+			<dd class="active"><a href="#contactForm">Contact Our Company</a></dd>
+			<dd><a href="#contactPeople">Specific Person</a></dd>
+		</dl>
+
+		<ul class="tabs-content contained">
+			<li id="contactFormTab" class="active">
+				{% placeholder "formulario" %}     
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- End Contact Details -->
+
+	<!-- Sidebar -->
+
+	<div class="three columns">
+
+		<!-- Clicking this placeholder fires the mapModal Reveal modal -->
+		<p>
+			{% placeholder "mapa" %}
+		</p>      
+		<p>
+			{% placeholder "twitter" %}
+		</p>
+	</div>
+
+	<!-- End Sidebar -->
+</div>
+
+
+
 {% endblock %}

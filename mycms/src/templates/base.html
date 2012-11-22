@@ -1,4 +1,5 @@
 {% load cms_tags menu_tags sekizai_tags %}
+{% load static from staticfiles %}
 <html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -22,8 +23,8 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->  				
 	{% render_block "css" %}
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css">	
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/app.css">
+	<link rel="stylesheet" href="{% static "css/foundation.css" %}">	
+	<link rel="stylesheet" href="{% static "css/app.css" %}">
 </head>
 <body>
 	{% cms_toolbar %}
@@ -53,10 +54,10 @@
 	{% render_block "js" %}
 
 	<!-- Included JS Files (Compressed) -->
-	<script src="{{ STATIC_URL }}js/foundation.min.js"></script>
+	<script src="{% static "js/foundation.min.js" %}"></script>
 
 	<!-- Initialize JS Plugins -->
-	<script src="{{ STATIC_URL }}js/app.js"></script>
+	<script src="{% static "js/app.js" %}"></script>
 
 	<script type="text/javascript">
 	$(window).load(function() {

@@ -8,7 +8,7 @@
 
 <div class="row">
 	<div class="three columns">
-		<h1><img src="http://placehold.it/400x100&text=Logo" /></h1>
+		<h1>{% placeholder "logo" %}</h1>
 	</div>
 	<div class="nine columns">
 		<ul class="nav-bar right">
@@ -24,12 +24,8 @@
 <div class="row">
 	<div class="twelve columns">
 		<div id="slider">
-			<img src="http://placehold.it/1000x400&text=[img 1]" />
-			<img src="http://placehold.it/1000x400&text=[img 2]" />
-			<img src="http://placehold.it/1000x400&text=[img 3]" />
-			<img src="http://placehold.it/1000x400&text=[img 4]" />
+			{% placeholder "banner_central" %}
 		</div>
-
 		<hr />
 	</div>
 </div>
@@ -40,20 +36,18 @@
 <div class="row">
 
 	<div class="four columns">
-		<img src="http://placehold.it/400x300&text=[img]" />
-		<h4>This is a content section.</h4>
-		<p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+		{% placeholder "primeira_sessao_img" %}
+		<p>{% placeholder "primeira_sessao_text" %}</p>
 	</div>
 
 	<div class="four columns">
-		<img src="http://placehold.it/400x300&text=[img]" />
-		<h4>This is a content section.</h4>
-		<p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
+		{% placeholder "segunda_sessao_img" %}
+		{% placeholder "segunda_sessao_text" %}
 	</div>
 
 	<div class="four columns">
-		<img src="http://placehold.it/400x300&text=[img]" />
-		{% placeholder "terceira_sessao" %}
+		{% placeholder "terceira_sessao_img" %}
+		{% placeholder "terceira_sessao_text" %}
 	</div>
 
 </div>

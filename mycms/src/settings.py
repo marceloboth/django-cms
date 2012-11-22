@@ -100,7 +100,9 @@ TEMPLATE_LOADERS = (
 CMS_TEMPLATES = (
     ('template_inicio.html', 'Index'),
     ('template_sobre.html', 'Sobre'),
+    ('template_blog.html', 'Blog'),
     ('template_contato.html', 'Contato'),
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,6 +113,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'cms.middleware.multilingual.MultilingualURLMiddleware',
+    #'cmsplugin_blog.middleware.MultilingualBlogEntriesMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
@@ -136,6 +139,12 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    # Admin
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -147,10 +156,10 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
 
     # 3rd party apps
-    'south',    
+    'south',
     'cms',
     'mptt',
-    'menus',    
+    'menus',
     'sekizai',
     'reversion',
     'easy_thumbnails',
@@ -169,4 +178,23 @@ INSTALLED_APPS = (
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
+    'cmsplugin_contact',
+
+    #'cmsplugin_blog',
+    #'djangocms_utils',
+    #'simple_translation',
+    #'tagging',
+    #'missing',
 )
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+#JQUERY_JS = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+#JQUERY_UI_JS = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'
+#JQUERY_UI_CSS = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css'
